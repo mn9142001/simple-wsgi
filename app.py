@@ -24,7 +24,7 @@ def server(request, start_response):
     start_response("200 OK", [('Content-Type', 'text/html; charset=utf-8')])
     #the data returned in response.body in this case the template code
     #index.html is your html template, make one
-    return [bytes(render_template('index.html', request), encoding='utf-8')]
+    return [bytes(render_template('index.html'), encoding='utf-8')]
 
 #code to be executed on typing python filename.py
 if __name__ == '__main__':
